@@ -18,6 +18,11 @@ describe ('constructor', () => {
     });
 
 
+    it ('has a initail hunger of 0', () => {
+        const pet = new Pet ('Fido');
+        expect(pet.hunger).toEqual(0);
+    })
+
 describe ('growUp',() => {
     it('increments the age by 1', () => {
         const pet = new Pet('Fido');
@@ -25,4 +30,15 @@ describe ('growUp',() => {
         expect(pet.age).toEqual(1);
         });
     });
+
+    //need to confirm this test
+describe ('hungry',() => {
+    it('increments the hunger by 5 per year', () => {
+        const pet = new Pet ('Fido');
+        pet.hunger();
+        expect(pet.age, pet.hunger).toEqual(1, 5);
+    });
+ });
+
 });
+
