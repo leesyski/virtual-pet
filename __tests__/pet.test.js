@@ -36,18 +36,20 @@ describe ('growUp',() => {
         pet.growUp();
         expect(pet.age).toEqual(1);
         });
-    });
-    //it('increments the hunger by 5', () => {
-        //const pet = new Pet('Fido');
-        //pet.growUp();
-        //expect(pet.hunger).toEqual(5);    
-//});
+    
+    it('increments the hunger by 5', () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        expect(pet.hunger).toEqual(5);   
+        });
 
-    //need to confirm this test
-describe ('hunger',() => {
-    it('increments the hunger by 5 per year', () => {
-       const pet = new Pet ('Fido');
-        pet.hunger();
-        expect(pet.hunger).toEqual(5);
-    });
+    it('decreases the fitness by 3', () => {
+        const pet = new Pet ('Fido');
+        pet.growUp();
+        expect(pet.fitness).toEqual(7)
+        });
 });
+
+
+
+ 
