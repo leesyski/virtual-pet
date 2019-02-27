@@ -2,6 +2,7 @@ const MAXIMUM_FITNESS = 10;
 const WALK_POINTS = 4;
 const FEED_POINTS = 3;
 const MINIMUM_HUNGER = 0;
+const NEED_A_WALK = 3
     
 function Pet(name) {
     this.name = name;
@@ -11,7 +12,7 @@ function Pet(name) {
 };
 
 Pet.prototype.growUp = function() {
-    // can we refacor these?
+    // can we refactor these?
         this.age += 1;
         this.hunger += 5;
         this.fitness -= 3;
@@ -33,5 +34,9 @@ Pet.prototype.feed = function(){
     }
 }
 
-
+Pet.prototype.checkUp = function(){
+    if (this.fitness <= 3){
+        return 'I need a Walk';
+    };
+}
 module.exports = Pet;
