@@ -90,4 +90,11 @@ describe('checkUp', () => {
         pet.checkUp();
         expect(pet.checkUp()).toBe('I need a Walk')
     })
+    
+    it('checks pets hunger is >= 5', () => {
+        const pet = new Pet ('Fido');
+        pet.hunger = 6;
+        pet.checkUp();
+        expect(pet.checkUp()).toBe('I am Hungry')
+    })
 });

@@ -37,6 +37,9 @@ Pet.prototype.feed = function(){
 Pet.prototype.checkUp = function(){
     if (this.fitness <= 3){
         return 'I need a Walk';
-    };
+    }
+    if (this.hunger >= 5){
+        return 'I am Hungry';
+    }
 }
 module.exports = Pet;
