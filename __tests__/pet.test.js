@@ -28,6 +28,11 @@ describe ('constructor', () => {
         const pet = new Pet ('Fido');
         expect (pet.fitness).toEqual(10);
     })
+    
+    it('has the ability to take on child as an array', () =>{
+        const pet = new Pet ('Fido');
+        expect (pet.children).toEqual([]);
+    });
 });
 
 
@@ -136,5 +141,17 @@ describe('checkUp', () => {
         pet.checkUp();
         expect(pet.checkUp()).toBe('I am hungry')
     });
+
+
+
+describe('haveBaby', () => {
+    it('adds a child to the parent', ()  => {
+        let parent = new Pet('Dave');
+        let child = new Pet('Amelia')
+        parent.haveBaby(child);
+        expect(parent.children[0]).toEqual({ name: 'Amelia', age: 0, hunger: 0, fitness: 10 });
+    });
 });
 
+
+});
